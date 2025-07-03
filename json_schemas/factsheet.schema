@@ -5,6 +5,8 @@
     "required": [
         "headerId",
         "timestamp",
+        "headerId",
+        "timestamp",
         "version",
         "manufacturer",
         "serialNumber",
