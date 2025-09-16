@@ -1755,7 +1755,7 @@ This JSON object defines the geometry properties of the AGV, e.g., outlines and 
 | *{* | | |
 | &emsp;set | string | Name of the envelope curve set. |
 | &emsp;format | string | Format of data, e.g., DXF. |
-| &emsp;***data*** | JSON object | 3D-envelope curve data, format specified in 'format'. |
+| &emsp;*data*| string | 3D-envelope curve data, format specified in 'format'. |
 | &emsp;*url* | string | Protocol and URL definition for downloading the 3D-envelope curve data, e.g., <ftp://xxx.yyy.com/ac4dgvhoif5tghji>. |
 | &emsp;*description* | string | Free-form text: description of envelope curve set |
 | *}* | | |
