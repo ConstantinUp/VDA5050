@@ -202,6 +202,8 @@ Movement | Any change in the spatial position or orientation of the vehicle or i
 Driving | The vehicle is considered to be driving when any component of its velocity vector (translational or rotational) is non-zero.
 Automatic Driving | The vehicle is driving without human intervention.
 Manual Driving | The vehicle is driving with human intervention.
+Line-guided | For the scope of this document a line-guided mobile robot follows a predefined trajectory. TODO: Link chapter of possible line guided scenarios.
+Freely-navigating | For the scope of this document a freely navigating mobile robot plans its own trajectory.
 
 
 # 5 Process and content of communication
@@ -1759,7 +1761,7 @@ This JSON object describes general properties of the AGV type.
 | agvClass | string | Simplified description of the AGV class.<br/>[FORKLIFT, CONVEYOR, TUGGER, CARRIER]<br/>FORKLIFT: forklift,<br/>CONVEYOR: AGV with conveyors on it,</br>TUGGER: tugger,<br/>CARRIER: load carrier with or without lifting unit. |
 | maxLoadMass | float64 | [kg], Maximum loadable mass. |
 | localizationTypes | array of string | Simplified description of localization type.<br/>Example values:<br/>NATURAL: natural landmarks,<br/>REFLECTOR: laser reflectors,<br/>RFID: RFID tags,<br/>DMC: data matrix code,<br/>SPOT: magnetic spots,<br/>GRID: magnetic grid.<br/>
-| navigationTypes | array of string | Array of path planning types supported by the AGV, sorted by priority.<br/>Example values:<br/>PHYSICAL_LINE_GUIDED: no path planning, the AGV follows physical installed paths,<br/>VIRTUAL_LINE_GUIDED: the AGV follows fixed (virtual) paths,<br/>AUTONOMOUS: the AGV plans its path autonomously.|
+| navigationTypes | array of string | Array of path planning types supported by the AGV, sorted by priority.<br/>Example values:<br/>PHYSICALLY_LINE_GUIDED: no path planning, the mobile robot follows physical installed paths,<br/>VIRTUALLY_LINE_GUIDED: the mobile robot follows fixed (virtual) paths,<br/>FREELY_NAVIGATING: the mobile robot plans its own path.|
 | *supportedZones* | array of string | Array of zone types supported by the vehicle.<br/>Enum {'BLOCKED', 'LINE_GUIDED', 'RELEASE', 'COORDINATED_REPLANNING', 'SPEED_LIMIT', 'ACTION', 'PRIORITY', 'PENALTY', 'DIRECTED', 'BIDIRECTED'}.
 
 #### physicalParameters
