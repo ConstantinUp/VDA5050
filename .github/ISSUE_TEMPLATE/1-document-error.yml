@@ -1,0 +1,38 @@
+name: Document error
+description: Typo, wrong figure or table, or a contradiction in VDA5050_EN.md.
+labels: ["bug fix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Errors in the document are fixed in the next bugfix release (3.0.x).
+        Please search the existing issues first and check the text on `main`.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of error
+      options:
+        - Typo, grammar or translation
+        - Content error (figure, table, contradiction)
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Section heading or permalink (click the line number on GitHub and choose "Copy permalink").
+      placeholder: "6.4.1 Zone types"
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What is wrong and what it should say
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I can open a pull request against the current bugfix branch (at the moment `dev/3.0.1`).

@@ -1,0 +1,36 @@
+name: Extension request
+description: Add a new optional feature, field, action or message.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Optional extensions go into the next minor version (3.x).
+        The core team reviews requests in its meetings and may invite you to present the use case in a guest session.
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Who needs what, in which situation.
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Why the current version is not enough
+      description: How you solve it today and where that falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: New fields, actions or messages. A JSON sketch helps.
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I can draft a pull request.
+        - label: I would present the use case in a core-team guest session if invited.
+        - label: Some details cannot be shared publicly; please contact me.

@@ -1,0 +1,52 @@
+name: Schema error
+description: Invalid JSON, wrong type, range or required field, or a schema that disagrees with the text.
+labels: ["bug fix"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Schema errors are discussed in the core team and fixed on `main`, without a new release.
+        `VDA5050_EN.md` is leading: if a schema disagrees with the text, the schema is corrected.
+  - type: dropdown
+    id: schema
+    attributes:
+      label: Schema
+      options:
+        - connection
+        - factsheet
+        - instantActions
+        - order
+        - responses
+        - state
+        - visualization
+        - zoneSet
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      options:
+        - 3.0.0 (release tag)
+        - main
+        - Older release
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Include the section of the text that says otherwise, if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example message or validator output
+      render: json
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I can open a pull request against `main`.

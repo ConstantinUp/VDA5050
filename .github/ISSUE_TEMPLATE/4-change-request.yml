@@ -1,0 +1,38 @@
+name: Change request
+description: Change existing fields or behavior.
+labels: ["change request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Changes that break existing implementations wait for the next major version.
+        The core team reviews requests in its meetings and may invite you to present the use case in a guest session.
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change
+      description: The current behavior and the behavior you propose.
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: The situation in which the current behavior falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What existing mobile robots or fleet controls would have to change.
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I can draft a pull request.
+        - label: I would present the use case in a core-team guest session if invited.
+        - label: Some details cannot be shared publicly; please contact me.

@@ -1,0 +1,36 @@
+name: Clarification request
+description: The text allows more than one reading, or leaves a behavior undefined.
+labels: ["clarification request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form when two implementations can both follow the text and still not work together.
+        Please search the existing issues first and leave out vendor and customer names.
+  - type: input
+    id: location
+    attributes:
+      label: Section
+      placeholder: "6.1.2 Orders and order update"
+    validations:
+      required: true
+  - type: textarea
+    id: unclear
+    attributes:
+      label: What is unclear
+      description: A short scenario and the readings the text allows.
+      placeholder: |
+        1. Fleet control sends an order whose last released node has no theta.
+        2. The mobile robot reaches the node; no order update arrives.
+        3. The mobile robot rotates in place.
+
+        Reading A: no theta means keep the current orientation.
+        Reading B: no theta means any orientation is fine, so rotating is allowed.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example message
+      description: A minimal message that shows the case.
+      render: json
